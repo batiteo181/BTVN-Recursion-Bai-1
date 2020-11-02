@@ -1,0 +1,24 @@
+public class SimpleRecursion {
+    public SimpleRecursion() {
+    }
+
+    public static int find(int x, int[] a, int i) {
+        if (x < i) {
+            return -1;
+        } else {
+            return a[x] == i ? x : find(x, a, i + 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] a = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int x = -2;
+        int index = find(x, a, 0);
+        if (index != -1) {
+            System.out.println("SỐ " + x + " trong index ở vị trí số " + index);
+        } else {
+            System.out.println("SỐ " + x + " không tồn tại trong mảng trả về -1");
+        }
+
+    }
+}
